@@ -1,71 +1,144 @@
-# Zepto E-commerce SQL Data Analysis
+# 🛒 Zepto E-commerce SQL Data Analysis
 
-## Project Overview
+## 📌 Project Overview
 
-This project focuses on analyzing Zepto e-commerce inventory data using SQL and PostgreSQL.
+This project focuses on analyzing Zepto e-commerce inventory data using **SQL and PostgreSQL**.
 
-The objective is to explore product pricing, discounts, stock availability, inventory, and estimated revenue to generate meaningful business insights.
+The objective is to explore product pricing, discounts, stock availability, inventory weight, and estimated revenue to generate meaningful business insights.
 
-## Objectives
+---
 
-- Analyze product pricing and discounts
-- Identify products with high discounts
-- Analyze out-of-stock products
-- Calculate estimated revenue by category
-- Identify categories with the highest average discount
-- Analyze product inventory and weight
-- Answer business questions using SQL
+## 🎯 Project Objectives
 
-## Tools and Technologies
+- Analyze product pricing and discount patterns
+- Identify highly discounted products
+- Find high-MRP products that are out of stock
+- Calculate estimated revenue for each product category
+- Identify products with high MRP and low discounts
+- Find categories offering the highest average discounts
+- Analyze inventory and product availability
 
-- PostgreSQL
-- SQL
-- pgAdmin
-- CSV
+---
 
-## Analysis Performed
+## 🛠️ Tools & Technologies
 
-### 1. Top Discounted Products
+- **SQL**
+- **PostgreSQL**
+- **pgAdmin 4**
+- **GitHub**
+- **CSV Dataset**
 
-Identified the top 10 products based on discount percentage.
+---
 
-### 2. High-MRP Out-of-Stock Products
+## 📂 Dataset
 
-Identified products with high MRP that are currently out of stock.
+The dataset contains Zepto e-commerce product and inventory information.
 
-### 3. Estimated Revenue by Category
+### Important Columns
 
-Calculated estimated revenue using:
+| Column | Description |
+|---|---|
+| `sku_id` | Unique product identifier |
+| `category` | Product category |
+| `name` | Product name |
+| `mrp` | Maximum Retail Price |
+| `discountPercent` | Discount percentage |
+| `availableQuantity` | Available quantity |
+| `discountedSellingPrice` | Selling price after discount |
+| `weightInGms` | Product weight in grams |
+| `outOfStock` | Indicates whether the product is out of stock |
+| `quantity` | Product quantity |
 
-Discounted Selling Price × Available Quantity
+---
 
-### 4. Average Discount by Category
+## 🔍 Business Questions
 
-Identified the top 5 categories offering the highest average discount.
+### Q1. Top 10 Best-Value Products
 
-### 5. Product and Inventory Analysis
+Find the top 10 products based on the highest discount percentage.
 
-Analyzed product prices, quantities, stock status, and product weight.
+### Q2. High MRP Products That Are Out of Stock
 
-## Key SQL Concepts Used
+Identify products with an MRP greater than ₹300 that are currently out of stock.
 
-- SELECT
-- WHERE
-- DISTINCT
-- GROUP BY
-- ORDER BY
-- LIMIT
-- SUM()
-- AVG()
-- ROUND()
+### Q3. Estimated Revenue by Category
+
+Calculate estimated revenue for each product category using:
+
+**Discounted Selling Price × Available Quantity**
+
+### Q4. High MRP Products With Low Discount
+
+Find products where:
+
+- MRP > ₹500
+- Discount < 10%
+
+### Q5. Categories With Highest Average Discount
+
+Identify the top 5 categories offering the highest average discount percentage.
+
+---
+
+## 🧠 SQL Concepts Used
+
+- `SELECT`
+- `WHERE`
+- `DISTINCT`
+- `GROUP BY`
+- `ORDER BY`
+- `LIMIT`
+- `SUM()`
+- `AVG()`
+- `ROUND()`
 - Aggregate Functions
+- Boolean filtering
+- Arithmetic operations
+- Aliases
 
-## Learning Outcome
+---
 
-This project helped me gain practical experience in SQL, PostgreSQL, data exploration, aggregation, filtering, sorting, and extracting business insights from e-commerce data.
+## 📊 Project Screenshots
 
-## Project Files
+### 1. Table Structure
 
-- `Zepto_SQL_Analysis.sql` - SQL queries used for analysis
-- `zepto_v2.csv` - Dataset used for analysis
-- `README.md` - Project documentation
+![Table Structure](screenshots/01_table_structure.png)
+
+### 2. Top 10 Discounted Products
+
+![Top Discounted Products](screenshots/02_top_discounted_products.png)
+
+### 3. High MRP & Out-of-Stock Products
+
+![High MRP Out of Stock](screenshots/03_high_mrp_outofstock.png)
+
+### 4. Estimated Revenue by Category
+
+![Revenue by Category](screenshots/04_revenue_by_category.png)
+
+### 5. High MRP & Low Discount Products
+
+![High MRP Low Discount](screenshots/05_high_mrp_low_discount.png)
+
+### 6. Top Categories by Average Discount
+
+![Top Categories Discount](screenshots/06_top_categories_discount.png)
+
+---
+
+## 📁 Repository Structure
+
+```text
+Zepto-SQL-Data-Analysis/
+│
+├── README.md
+├── Zepto_SQL_Analysis.sql
+├── zepto_v2.csv
+│
+└── screenshots/
+    ├── 01_table_structure.png
+    ├── 02_top_discounted_products.png
+    ├── 03_high_mrp_outofstock.png
+    ├── 04_revenue_by_category.png
+    ├── 05_high_mrp_low_discount.png
+    └── 06_top_categories_discount.png
